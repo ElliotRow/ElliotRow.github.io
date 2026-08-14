@@ -62,7 +62,17 @@
     //Resizing the pdf so its actually visable on mobile
     function resizePDF() {
     const iframe = document.querySelector("iframe");
-    iframe.style.height = window.innerHeight + "px";
+    
+    //check if its mobile and adjust how it resizes according to if it is or not
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+    
+    if (isMobile) {
+        // mobile uses innerHeight to avoid top-bar clipping
+        iframe.style.height = window.innerHeight + "px";
+    } else {
+        // desktop browsers use full viewport height
+        iframe.style.height = "100vh";
+    }
     }
 
     window.addEventListener("resize", resizePDF);
