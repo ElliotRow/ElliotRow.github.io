@@ -52,7 +52,7 @@ a:active { color: darkslateblue; }
 a:link, a:visited { text-decoration: none; }
 
 main {
-    margin-left: 20%;
+    margin-left: 280px;
     margin-right: 0;
     width: 80%;
     height: auto;
