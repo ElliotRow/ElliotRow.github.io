@@ -40,7 +40,7 @@
 <main>
     <iframe
             src="https://docs.google.com/gview?embedded=true&url=https://elliotrow.github.io/Images/Elliot%20Rowberry%20-%20CV.pdf"
-            style="border: none; width: 80vw; max-width: 90%; height: 90vh;"
+            style="border: none; width: 80vw; max-width: 90%; height: 100vh;"
     ></iframe>
 
 </main>
@@ -58,6 +58,16 @@
     checkbox.addEventListener("change", () => {
         localStorage.setItem("submenuOpen", checkbox.checked);
     });
+
+    //Resizing the pdf so its actually visable on mobile
+    function resizePDF() {
+    const iframe = document.querySelector("iframe");
+    iframe.style.height = window.innerHeight + "px";
+    }
+
+    window.addEventListener("resize", resizePDF);
+    window.addEventListener("orientationchange", resizePDF);
+    resizePDF();
 </script>
 
 </html>
