@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+
+<!-- formatting css -->
+<link rel="stylesheet" type="text/css" href="../Format.css" />
+<link rel="stylesheet" type="text/css" href="../Sidebar.css" />
+
+<header>
+    <div class="vertical"></div>
+
+    <img src="../Images/profile%20picture.png" alt="Profile Image" width="100%">
+    <h1 style="font-family: Georgia, serif"> Elliot Rowberry</h1>
+    <h4><i>"Professional Moron"</i></h4>
+    <hr>
+    <br>
+    <a href="index.html">CV</a>
+    <br><br><br>
+    <input id="check01" type="checkbox" name="Galleries" />
+    <label for="check01"><b>Portfolios ▽ </b></label>
+    <br>
+    <ul class="submenu">
+        <li><a href="Coding%20Portfolio.html">Coding Portfolio</a></li>
+        <br>
+        <li><a href="2D%20Portfolio.html">2D Portfolio</a></li>
+        <br>
+        <li><a href="3D%20Portfolio.html">3D Portfolio</a></li>
+
+    </ul>
+    <hr><br>
+    <a href="http://www.linkedin.com/in/elliot-rowberry-6049a321b"><img src="../Images/linkedin%20logo.png" width="35%" style="padding-right: 10%; padding-left: 5% "></a>
+    <a href="http://www.github.com/ElliotRow"><img src="../Images/github%20logo.jpg" width="35%" style="padding-left: 10%"></a>
+</header>
+
+
+<main>
+
+    <img src="../Images/arm%20blender.png" alt="Amias" width="25%" id="Gallery">
+    <img src="../Images/table%20blender.png" alt="Lucy" width="25%" id="Gallery">
+    <img src="../Images/conveyor%20blender.png" alt="Iroh" width="20%" id="Gallery"><br>
+    <img src="../Images/book%20blender.png" alt="Dog" width="20%" id="Gallery">
+    <img src="../Images/countertop%20blender.png" alt="Trauma" width="30%" id="Gallery">
+    <img src="../Images/oven%20blender.png" alt="Elden John" width="25%" id="Gallery"><br>
+    <img src="../Images/dice%20blender.png" alt="Chainsaw Man" width="80%" id="Gallery">
+    <img src="../Images/spear%20blender.png" alt="Malori" width="80%" id="Gallery"><br>
+    <video width="80%" id="Gallery" controls>
+        <source src="../Videos/final%20animation.mp4" type="video/mp4" >
+    </video>
+
+</main>
+
+<script>
+    //save the menu being open so it doesn't close every time you switch pages
+    const checkbox = document.getElementById("check01");
+    const saved = localStorage.getItem("submenuOpen");
+    if (saved === "true") {
+        checkbox.checked = true;
+    }
+
+    // save state whenever it changes
+    checkbox.addEventListener("change", () => {
+        localStorage.setItem("submenuOpen", checkbox.checked);
+    });
+</script>
+
+</html>

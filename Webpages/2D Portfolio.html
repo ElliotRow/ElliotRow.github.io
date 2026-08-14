@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+
+<!-- formatting css -->
+<link rel="stylesheet" type="text/css" href="../Format.css" />
+<link rel="stylesheet" type="text/css" href="../Sidebar.css" />
+
+<header>
+    <div class="vertical"></div>
+
+    <img src="../Images/profile%20picture.png" alt="Profile Image" width="100%">
+    <h1 style="font-family: Georgia, serif"> Elliot Rowberry</h1>
+    <h4><i>"Professional Moron"</i></h4>
+    <hr>
+    <br>
+    <a href="index.html">CV</a>
+    <br><br><br>
+    <input id="check01" type="checkbox" name="Galleries" />
+    <label for="check01"><b>Portfolios ▽ </b></label>
+    <br>
+    <ul class="submenu">
+        <li><a href="Coding%20Portfolio.html">Coding Portfolio</a></li>
+        <br>
+        <li><a href="2D%20Portfolio.html">2D Portfolio</a></li>
+        <br>
+        <li><a href="3D%20Portfolio.html">3D Portfolio</a></li>
+
+    </ul>
+    <hr><br>
+    <a href="http://www.linkedin.com/in/elliot-rowberry-6049a321b"><img src="../Images/linkedin%20logo.png" width="35%" style="padding-right: 10%; padding-left: 5% "></a>
+    <a href="http://www.github.com/ElliotRow"><img src="../Images/github%20logo.jpg" width="35%" style="padding-left: 10%"></a>
+</header>
+
+
+<main>
+
+    <img src="../Images/Amias.jpg" alt="Amias" width="300px" id="Gallery">
+    <img src="../Images/Dog.gif" alt="Dog" width="300px" id="Gallery">
+    <img src="../Images/Iroh.jpg" alt="Iroh" width="300px" id="Gallery">
+    <img src="../Images/Trauma%20time.jpg" alt="Trauma" width="300px" id="Gallery"><br><br><br>
+    <img src="../Images/Chainsaw%20man.jpg" alt="Chainsaw Man" width="300px" id="Gallery">
+    <img src="../Images/Elden_John.jpg" alt="Elden John" width="300px" id="Gallery">
+    <img src="../Images/Malori.jpg" alt="Malori" width="300px" id="Gallery">
+    <img src="../Images/Lucy.jpg" alt="Lucy" width="300px" id="Gallery">
+
+</main>
+
+<script>
+    //save the menu being open so it doesn't close every time you switch pages
+    const checkbox = document.getElementById("check01");
+    const saved = localStorage.getItem("submenuOpen");
+    if (saved === "true") {
+        checkbox.checked = true;
+    }
+
+    // save state whenever it changes
+    checkbox.addEventListener("change", () => {
+        localStorage.setItem("submenuOpen", checkbox.checked);
+    });
+</script>
+
+</html>

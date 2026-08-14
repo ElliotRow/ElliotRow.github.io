@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Homepage</title>
+</head>
+
+<!-- formatting css -->
+<link rel="stylesheet" type="text/css" href="../Format.css" />
+<link rel="stylesheet" type="text/css" href="../Sidebar.css" />
+
+<header>
+    <div class="vertical"></div>
+
+    <img src="../Images/profile%20picture.png" alt="Profile Image" width="100%">
+    <h1 style="font-family: Georgia, serif"> Elliot Rowberry</h1>
+    <h4><i>"Professional Moron"</i></h4>
+    <hr>
+    <br>
+    <a href="index.html">CV</a>
+    <br><br><br>
+    <input id="check01" type="checkbox" name="Galleries" />
+    <label for="check01"><b>Portfolios ▽ </b></label>
+    <br>
+    <ul class="submenu">
+        <li><a href="Coding%20Portfolio.html">Coding Portfolio</a></li>
+        <br>
+        <li><a href="2D%20Portfolio.html">2D Portfolio</a></li>
+        <br>
+        <li><a href="3D%20Portfolio.html">3D Portfolio</a></li>
+
+    </ul>
+    <hr><br>
+    <a href="http://www.linkedin.com/in/elliot-rowberry-6049a321b"><img src="../Images/linkedin%20logo.png" width="35%" style="padding-right: 10%; padding-left: 5% "></a>
+    <a href="http://www.github.com/ElliotRow"><img src="../Images/github%20logo.jpg" width="35%" style="padding-left: 10%"></a>
+</header>
+
+
+<main>
+    <div class="project">
+    <h1 style="color: #4169E1"><b>KEY PROJECTS</b></h1>
+    </div>
+    <div class="project">
+        <h2 style="color: #CBC3E3">Internet Application and Database Design (Year 1) </h2>
+        <h3 style="color: #ADD8E6">HTML5 | CSS | JavaScript | PHP | SQL</h3>
+        <h4>Created a website to support the creation, detailing and managing of the progress of multiple projects. </h4>
+            <p>    •	The website allowed users to create and login to their own account and create, view and edit projects they were associated with. </p>
+            <p>    •	This website was connected to a SQL database which was updated via JavaScript and PHP.</p>
+            <p>    •	A key part of the project was to ensure the website was secure against cyberattacks. Extensive testing was carried out to ensure the preventative measures I implemented against threats, such as SQL Injection, were effective.</p>
+    </div>
+    <div class="project">
+        <h2 style="color: #CBC3E3">E-Commerce Web Application (Year 2) </h2>
+        <h3 style="color: #ADD8E6">HTML5 | CSS | JavaScript | MongoDB | JSON</h3>
+        <h4>Worked as part of a team of four, to collaboratively design and develop a faux online jewellery shopping platform, that allowed users to set up an account to browse and keep track of all their product purchases.</h4>
+            <p> •	MongoDB was selected and installed as our database software, used to store both customer information and project data, as the team felt this was the best option to support the website's functionality. </p>
+            <p> •	Created bespoke website UI assets to enhance the appearance of the website design.</p>
+            <p> •	I was one of the front-end developers for this group project and was responsible for the product page and checkout page. Along with this, I assigned individual and joint tasks to members of the team and ensured each deliverable was completed to satisfaction and that sufficient time was allotted for development reviews and testing.</p>
+    </div>
+    <div class="project">
+        <h2 style="color: #CBC3E3">Game Development Project (Year 3) </h2>
+        <h3 style="color: #ADD8E6">Unity | C# | JSON</h3>
+        <h4>Created a functional demo of a factory style cooking game, incorporating custom 3D and 2D assets. This game involved managing the needs of a restaurant, while serving as both the chef and server through automating the various processes involved. </h4>
+        <p> •	Created a comprehensive game design document to outline the key features of the design, such as the gameplay loop, win conditions and fail states, along with outlining how the gameplay meets the design considerations outlined in the brief. </p>
+        <p> •	Developed using a unity engine and assets were created through clip studio and blender as I felt using unity store assets was too impersonal for my design considerations. </p>
+        <p> •	Incorporated a working gameplay loop and the ability to save and load progress across sessions.</p>
+        <p> •	The build required in-depth testing to find and fix bugs encountered during the project development.</p>
+    </div>
+    <div class="project">
+        <h2 style="color: #CBC3E3">Animation Project (Year 3) </h2>
+        <h3 style="color: #ADD8E6">Blender</h3>
+        <h4>Used Blender to create a bespoke 2-minute-long animation, incorporating all of the skills taught throughout the animation unit along with my own extracurricular research and practice to create an animation about a prisoner trapped beneath a mountain.</h4>
+        <p> •	Used shader nodes to create advanced materials such as realistic brick and concrete, along with Compositing to create bloom effects for more customised lighting.</p>
+        <p> •	Utilised sculpting on certain objects such as the heart and lungs to make the design look more true to life, along with keyframing to make them perform their functions. </p>
+        <p> •	Used constraints on the camera to better control its movements while not having it “stutter” as it would with simple keyframe based movement.</p>
+        <h4 style="text-align: center; color: #CBC3E3"><b>The animation can be found in the 3D Portfolio</b></h4>
+    </div>
+</main>
+
+
+<script>
+    //save the menu being open so it doesn't close every time you switch pages
+    const checkbox = document.getElementById("check01");
+    const saved = localStorage.getItem("submenuOpen");
+    if (saved === "true") {
+        checkbox.checked = true;
+    }
+
+    // save state whenever it changes
+    checkbox.addEventListener("change", () => {
+        localStorage.setItem("submenuOpen", checkbox.checked);
+    });
+</script>
+
+</html>
